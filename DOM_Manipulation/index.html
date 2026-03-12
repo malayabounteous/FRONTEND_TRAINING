@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .style1{
+        color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">
+        Hello world
+       
+    </h1>
+     <button onclick="changeTitle()">Click for text chnage</button>
+    <button onclick="changeStyle()">Click for color change</button>
+    <br>
+    <br>
+    <button onclick="addList()">click to add</button>
+      <ul id="list">
+         <li>
+            task1
+            <button onclick="deleteItem(this)">delete</button>
+         </li>
+         <li>
+            task2
+            <button onclick="deleteItem(this)">delete</button>
+         </li>
+          <li>
+            task2
+            <button onclick="deleteItem(this)">delete</button>
+         </li>
+      </ul>
+
+
+      <br>
+      <br>
+      <input type="input" id="todo">
+      <button onclick="addHtml()">show</button>
+    <ul id="task">
+
+    </ul>
+     <br>
+     <br>
+
+      
+</body>
+<script>
+    function changeTitle()
+    {
+     document.getElementById("title").textContent="Hello bacho";
+    }
+    function changeStyle()
+    {
+        document.getElementById("title").classList.add("style1");
+    }
+    function addList()
+    {
+        const ll=document.createElement("li");
+        
+        ll.textContent="new item";
+        document.getElementById("list").appendChild(ll);
+    }
+    
+    function deleteItem(button)
+    {
+      button.parentElement.remove();
+    }
+    function showName()
+    {
+        const name=document.getElementById("nameid").value;
+        const st= document.getElementById("output").textContent;
+        document.getElementById("output").textContent=st+" Hello "+name;
+    }
+    
+
+    function addTask()
+    {
+        const task=document.getElementById("todo").value;
+
+        const li=document.createElement("li");
+        li.textContent=task;
+
+        const btn=document.createElement("button");
+        btn.textContent="delete task";
+        btn.onclick=function(){
+            li.remove();
+        }
+        li.appendChild(btn);
+        document.getElementById("task").appendChild(li);
+    }
+    
+    function addHtml()
+    {
+        const name=document.getElementById("todo").value;
+
+        const ul=document.getElementById("task");
+        ul.innerHTML+=`
+        <li>
+            ${name}
+
+            <button onClick="this.parentElement.remove()">DELETE</button>
+
+            </li>
+        `
+    }
+
+
+
+
+
+
+</script>
+</html>
