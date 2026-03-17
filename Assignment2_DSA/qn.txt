@@ -1,0 +1,6 @@
+create an angular app
+it has   3 component
+
+use data binding to create 4 pages and show there names on respevtve pages 
+create app module->app component(first component)
+   compontn->(frontend->bacjned->home)
