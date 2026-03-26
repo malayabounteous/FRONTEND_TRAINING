@@ -1,0 +1,24 @@
+Day 3: Advanced String Manipulation & Regular Expressions 
+
+ 
+Block 1: Algorithmic String Manipulation (2 Hours) 
+
+Constraint for this block: Do not use StringBuilder yet. Rely entirely on the standard String methods, char arrays, and your algorithmic logic. 
+
+1. The Optimal Anagram Checker (30 mins) 
+
+Task: Given two strings, determine if they are anagrams of each other (contain the exact same characters in the exact same quantities). Example: "listen" and "silent". 
+
+Constraint: Do not just convert them to arrays and use Arrays.sort(). Achieve $O(n)$ time complexity by using an integer array of size 26 as a frequency counter for the alphabet. 
+
+2. Longest Substring Without Repeating Characters (45 mins) 
+
+Task: Given a string, find the length of the longest substring without repeating characters. Example: For "abcabcbb", the answer is "abc", with the length of 3. For "pwwkew", the answer is "wke", with the length of 3. 
+
+Focus: This is a classic Sliding Window problem. Use two pointers to represent the window and a boolean array or HashSet to track the characters currently in your window. 
+
+3. Longest Palindromic Substring (45 mins) 
+
+Task: Given a string s, return the longest palindromic substring in s. Example: "babad" could return "bab" or "aba". 
+
+Constraint: Aim for $O(n^2)$ time complexity. (Hint: Create a helper method that expands outward from the center of the string. Remember that palindromes can have an odd or even length, so a center could be one character or two adjacent characters). 

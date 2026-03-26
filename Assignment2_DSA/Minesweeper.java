@@ -14,6 +14,8 @@ public class Minesweeper {
        int[][]cnt=new int[n][m];
        int[]r={-1,-1,-1,0,0,1,1,1};
        int[]c={-1,0,1,-1,1,-1,0,1};
+
+       // (0,0)->(0,-1),(0,1),(-1,0),(1,0),(-1,-1),(-1,1),(1,-1),(1,1);
        for(int i=0;i<n;++i)
        {
         for(int j=0;j<m;++j)
@@ -24,6 +26,7 @@ public class Minesweeper {
             int cur=0;
             for(int k=0;k<8;++k)
             {
+
                 int row=r[k]+i;
                 int col=c[k]+j;
                 if(row>=0 && row<n && col>=0 && col<m && mine[row][col]=='M')
