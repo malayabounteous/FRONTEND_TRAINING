@@ -1,6 +1,6 @@
 package MISC;
 class A{
-    Integer x=10;
+   // Integer x=10;
 
     public void display()
     {
@@ -13,6 +13,10 @@ class B extends A{
     {
         System.out.println("Hello from B "+x);
     }
+    public void display2()
+    {
+        System.out.println("Hello from B "+x);
+    }
 }
 
 public class QN7 {
@@ -20,6 +24,7 @@ public class QN7 {
         
         A obj1=new B();
         obj1.display();
-        System.out.println(obj1.x);//variable are not overriden they are hidden, so it will print 10 from class A
+        ((B)obj1).display2();
+        System.out.println(obj1.x);
     }
 }

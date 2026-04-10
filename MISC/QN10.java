@@ -34,6 +34,6 @@ public class QN10 {
         Vehicle car = new Car();
         car.start();
         Vehicle.print();
-        car.print();//we can call static method using object reference but it is not recommended, it will call the static method of Vehicle class
+        car.print();
     }
 }
